@@ -1,29 +1,37 @@
-import pygame 
-#pygame is a library which helps create a 2d environment/canvas which the user can work with. It especially is very useful with games. "Import" takes this library and connects it to this code, therefore the methods attached to the library can be used.
+import pygame
 from pygame.locals import *
-# this will import all the attributes and methods regarding pygame.locals, this will specially help in the game loop where the event loop comes about
 
 pygame.init()
-# This initializes the library pygame so that it can be used, this is like the starting motor of a car. 
 window = pygame.display.set_mode((800, 800))
-#This will create a surface, more like a canvas of size 800 by 800 which will help contain sprites
+pygame.display.set_caption("Protoype 2")
 clock = pygame.time.Clock()
-#This creates an instance of a clock using the pygame library, this gives the game a sense of time. This is how animations and level timers are implemented into the program. 
-running= True
 
-while running:#The main loop which will generate each frame.
-	clock.tick(60)
-	#Since the game loop is a for loop, the number of frames will depend on the device, therefore some will experience the game in unusual manners. Therefore, we limit the game loop to loop once per 1/600 second. 
-	window.fill((0,0,0))
-	#This resets the game canvas so that the next frame can be drawn.
+player = pygame.Rect(375, 375, 50, 50)
 
-	'''most of the objects go here'''
-	
-	for event in pygame.event.get():
-	        if event.type == QUIT:
-		        running = False
-'''most of the input checks go here'''
-'''most of the object updates and rendering goes here'''
-pygame.display.update()
-# this updates the canvas of the new screen.
-		
+speed = 5
+running = True
+
+while running:
+    clock.tick(60)
+    window.fill((30, 30, 30))
+
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            running = False
+
+    keys = pygame.key.get_pressed()
+    if keys[K_w] or keys[K_UP]:
+        player.y -= speed
+    if keys[K_s] or keys[K_DOWN]:
+        player.y += speed
+    if keys[K_a] or keys[K_LEFT]:
+        player.x -= speed
+    if keys[K_d] or keys[K_RIGHT]:
+        player.x += speed
+
+    player.clamp_ip(window.get_rect())
+
+    pygame.draw.rect(window, (200, 100, 100), player)
+    pygame.display.update()
+
+pygame.quit()

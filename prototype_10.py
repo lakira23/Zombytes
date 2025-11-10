@@ -98,39 +98,39 @@ accuracy = 0
 
 
 # RESOURCES
-menu_backdrop = pygame.image.load("ACTUAL\Resources\Images\Menu\menu_img.png")
-character_and_weapons_backdrop = pygame.image.load("ACTUAL\Resources\Images\Menu\game&weapons\Character.png")
-city_backdrop = pygame.image.load("ACTUAL\Resources\Images\city_backdrop.PNG")
-military_backdrop = pygame.image.load("ACTUAL\Resources\Images\military_back_drop.PNG")
-country_side_backdrop = pygame.image.load("ACTUAL\Resources\Images\country_side_backdrop.png")
-Leaderboard_backdrop = pygame.image.load("ACTUAL\Resources\Images\Menu\Leaderboard\Leaderboard_backdrop.png")
-game_backdrop = pygame.image.load("ACTUAL\Resources\Images\Game_back_drop.png")
-death_backdrop = pygame.image.load("ACTUAL\Resources\Images\Death_screen_img.png")
-settings_backdrop = pygame.image.load("ACTUAL\Resources\Images\Menu\settings\settings_backdrop.png")
+menu_backdrop = pygame.image.load("ACTUAL/Resources/Images/Menu/menu_img.png")
+character_and_weapons_backdrop = pygame.image.load("ACTUAL/Resources/Images/Menu/game&weapons/Character.png")
+city_backdrop = pygame.image.load("ACTUAL/Resources/Images/city_backdrop.PNG")
+military_backdrop = pygame.image.load("ACTUAL/Resources/Images/military_back_drop.PNG")
+country_side_backdrop = pygame.image.load("ACTUAL/Resources/Images/country_side_backdrop.png")
+Leaderboard_backdrop = pygame.image.load("ACTUAL/Resources/Images/Menu/Leaderboard/Leaderboard_backdrop.png")
+game_backdrop = pygame.image.load("ACTUAL/Resources/Images/Game_back_drop.png")
+death_backdrop = pygame.image.load("ACTUAL/Resources/Images/Death_screen_img.png")
+settings_backdrop = pygame.image.load("ACTUAL/Resources/Images/Menu/settings/settings_backdrop.png")
 
-character_1 = pygame.image.load("ACTUAL\Resources\Images\character_1.png")
-character_2 = pygame.image.load("ACTUAL\Resources\Images\character_2.png")
-character_3 = pygame.image.load("ACTUAL\Resources\Images\character_3.png")
+character_1 = pygame.image.load("ACTUAL/Resources/Images/character_1.png")
+character_2 = pygame.image.load("ACTUAL/Resources/Images/character_2.png")
+character_3 = pygame.image.load("ACTUAL/Resources/Images/character_3.png")
 
-creepers_img = pygame.image.load("ACTUAL\Resources\Images\creepers_img.png")
+creepers_img = pygame.image.load("ACTUAL/Resources/Images/creepers_img.png")
 
-weapon_1 = pygame.image.load("ACTUAL\Resources\Images\Menu\game&weapons\STG-44.png")
-weapon_2 = pygame.image.load("ACTUAL\Resources\Images\Menu\game&weapons\Vulcan_cannon.png")
-weapon_3 = pygame.image.load("ACTUAL\Resources\Images\Menu\game&weapons\GOL_Sniper_Magnum.png")
+weapon_1 = pygame.image.load("ACTUAL/Resources/Images/Menu/game&weapons/STG-44.png")
+weapon_2 = pygame.image.load("ACTUAL/Resources/Images/Menu/game&weapons/Vulcan_cannon.png")
+weapon_3 = pygame.image.load("ACTUAL/Resources/Images/Menu/game&weapons/GOL_Sniper_Magnum.png")
 
-easy_button_img = pygame.image.load("ACTUAL\Resources\Images\Menu\Settings\easy_button.png")
-hard_button_img = pygame.image.load("ACTUAL\Resources\Images\Menu\Settings\hard_button.png")
-normal_button_img = pygame.image.load("ACTUAL\Resources\Images\Menu\Settings\normal_button.png")
-off_button_img = pygame.image.load("ACTUAL\Resources\Images\Menu\Settings\off_button.png")
-on_button_img = pygame.image.load("ACTUAL\Resources\Images\Menu\Settings\on_button.png")
+easy_button_img = pygame.image.load("ACTUAL/Resources/Images/Menu/Settings/easy_button.png")
+hard_button_img = pygame.image.load("ACTUAL/Resources/Images/Menu/Settings/hard_button.png")
+normal_button_img = pygame.image.load("ACTUAL/Resources/Images/Menu/Settings/_normal_button.png")
+off_button_img = pygame.image.load("ACTUAL/Resources/Images/Menu/Settings/off_button.png")
+on_button_img = pygame.image.load("ACTUAL/Resources/Images/Menu/Settings/on_button.png")
 
-Jesey_ten = pygame.font.Font("ACTUAL\Resources\Images\Jersey10-Regular.ttf", 30)
+Jesey_ten = pygame.font.Font("ACTUAL/Resources/Images/Jersey10-Regular.ttf", 30)
 
 indicator_imgs = [
-    ["ACTUAL\Resources\Images\thirst.png",(237,4)],
-    ["ACTUAL\Resources\Images\health.png",(522,4)],
-    ["ACTUAL\Resources\Images\stamina.png",(237,36)],
-    ["ACTUAL\Resources\Images\sanity.png",(522,43)]
+    ["ACTUAL/Resources/Images/thirst.png",(237,4)],
+    ["ACTUAL/Resources/Images/health.png",(522,4)],
+    ["ACTUAL/Resources/Images/stamina.png",(237,36)],
+    ["ACTUAL/Resources/Images/sanity.png",(522,43)]
 ]
 
 backdrop_options = [city_backdrop, military_backdrop, country_side_backdrop]
@@ -551,10 +551,10 @@ class Pick_ups(Object):
     def __init__(self, width, height, x_pos, y_pos):
         super().__init__(width, height, x_pos, y_pos)
         types = [
-            ["antipsychotics","Resources/Images/antipsycotics.png"],
-            ["food","Resources/Images/food.png"],
-            ["damage boosts","Resources/Images/damage_boosts.png"],
-            ["drinks","Resources/Images/drink.png"],
+            ["antipsychotics","ACTUAL/Resources/Images/antipsycotics.png"],
+            ["food","ACTUAL/Resources/Images/food.png"],
+            ["damage boosts","ACTUAL/Resources/Images/damage_boosts.png"],
+            ["drinks","ACTUAL/Resources/Images/drink.png"],
             ["fake",None]
             ]
         
@@ -913,13 +913,13 @@ def death():
         ]
 
         with open("leaderboard", "a") as file:
-            file.write(str(score_entry) + "\n")
+            file.write(str(score_entry) + "/n")
         
         death_logged = True
     
     window.blit(death_backdrop, (0, 0))
 
-    go_back = Buttons("go menu",186,40,42,724,pygame.image.load("Resources/Images/Menu/Game_start_button_img.png"))
+    go_back = Buttons("go menu",186,40,42,724,pygame.image.load("ACTUAL/Resources/Images/Menu/Game_start_button_img.png"))
     go_back.set_mouse_pos()
 
     # Display text stats
@@ -976,30 +976,30 @@ def reset_game():
 ###################### Menu Buttons Setup
 
 menu_buttons = [
-    Buttons('go_game', 186, 40, 307, 234, pygame.image.load("Resources/Images/Menu/Game_start_button_img.png")),
-    Buttons('Name', 152, 44, 324, 512, pygame.image.load("Resources/Images/Menu/name_button_img.png")),
-    Buttons('go_Leaderboard', 174, 44, 313, 564, pygame.image.load("Resources/Images/Menu/leaderboard_button_img.png")),
-    Buttons('go_Characters_and_weapons', 298, 45, 251, 616, pygame.image.load("Resources/Images/Menu/character_and_weapons_buttons_img.png")),
-    Buttons('go_Settings', 120, 44, 340, 670, pygame.image.load("Resources/Images/Menu/settings_button_img.png")),
-    Buttons('Exit', 35, 31, 9, 14, pygame.image.load("Resources/Images/Menu/Exit_button_png.png"))
+    Buttons('go_game', 186, 40, 307, 234, pygame.image.load("ACTUAL/Resources/Images/Menu/Game_start_button_img.png")),
+    Buttons('Name', 152, 44, 324, 512, pygame.image.load("ACTUAL/Resources/Images/Menu/name_button_img.png")),
+    Buttons('go_Leaderboard', 174, 44, 313, 564, pygame.image.load("ACTUAL/Resources/Images/Menu/leaderboard_button_img.png")),
+    Buttons('go_Characters_and_weapons', 298, 45, 251, 616, pygame.image.load("ACTUAL/Resources/Images/Menu/character_and_weapons_buttons_img.png")),
+    Buttons('go_Settings', 120, 44, 340, 670, pygame.image.load("ACTUAL/Resources/Images/Menu/settings_button_img.png")),
+    Buttons('Exit', 35, 31, 9, 14, pygame.image.load("ACTUAL/Resources/Images/Menu/Exit_button_png.png"))
 ]
 
 ######Leaderboard buttons
 
 leaderboard_buttons = [
-    Buttons('survival_order', 148, 27, 161, 189, pygame.image.load("Resources/Images/Menu/Leaderboard/Survival_time_order_button_img.png")),
-    Buttons('Score_order', 149, 27, 326, 189, pygame.image.load("Resources/Images/Menu/Leaderboard/Total_score_order_button_img.png")),
-    Buttons('Accuracy_order', 148, 27, 492, 189, pygame.image.load("Resources/Images/Menu/Leaderboard/Accuracy_order_button_img.png")),
-    Buttons('go_menu', 102, 47, 662, 741, pygame.image.load("Resources/Images/Menu/Leaderboard/Back_button_img.png")),
-    Buttons('scroll_down',38,44,77,741,pygame.transform.flip(pygame.image.load("Resources/Images/Menu/Leaderboard/arrow.png"),False,True)),
-    Buttons('scroll_up',38,44,31,741,pygame.image.load("Resources/Images/Menu/Leaderboard/arrow.png"))
+    Buttons('survival_order', 148, 27, 161, 189, pygame.image.load("ACTUAL/Resources/Images/Menu/Leaderboard/Survival_time_order_button_img.png")),
+    Buttons('Score_order', 149, 27, 326, 189, pygame.image.load("ACTUAL/Resources/Images/Menu/Leaderboard/Total_score_order_button_img.png")),
+    Buttons('Accuracy_order', 148, 27, 492, 189, pygame.image.load("ACTUAL/Resources/Images/Menu/Leaderboard/Accuracy_order_button_img.png")),
+    Buttons('go_menu', 102, 47, 662, 741, pygame.image.load("ACTUAL/Resources/Images/Menu/Leaderboard/Back_button_img.png")),
+    Buttons('scroll_down',38,44,77,741,pygame.transform.flip(pygame.image.load("ACTUAL/Resources/Images/Menu/Leaderboard/arrow.png"),False,True)),
+    Buttons('scroll_up',38,44,31,741,pygame.image.load("ACTUAL/Resources/Images/Menu/Leaderboard/arrow.png"))
 ]
 
 
 ###
 
 character_and_weapons_buttons = [
-    Buttons("go_menu",102, 47, 662, 741, pygame.image.load("Resources/Images/Menu/Leaderboard/Back_button_img.png")),
+    Buttons("go_menu",102, 47, 662, 741, pygame.image.load("ACTUAL/Resources/Images/Menu/Leaderboard/Back_button_img.png")),
     Buttons(f"set_character:0", 126,126,80,530,pygame.transform.scale(User.get_sprite_animation(character_1,0,64,64,0),(126,126))),
     Buttons(f"set_character:1", 126,126,320,530,pygame.transform.scale(User.get_sprite_animation(character_2,0,64,64,0),(126,126))),
     Buttons(f"set_character:2", 126,126,580,530,pygame.transform.scale(User.get_sprite_animation(character_3,0,64,64,0),(126,126))),
@@ -1009,7 +1009,7 @@ character_and_weapons_buttons = [
 ]
 
 settings_buttons = [
-    Buttons("go_menu",102, 47, 662, 741, pygame.image.load("Resources/Images/Menu/Leaderboard/Back_button_img.png")),
+    Buttons("go_menu",102, 47, 662, 741, pygame.image.load("ACTUAL/Resources/Images/Menu/Leaderboard/Back_button_img.png")),
     
     Buttons("difficulty:easy",95,29,353,318,easy_button_img),
     Buttons("difficulty:normal",95,29,460,318,normal_button_img),
@@ -1062,7 +1062,7 @@ while Game_runner:
     CLOCK.tick(FPS)
     clicking = False
 
-    cursor_image = pygame.image.load("Resources/Images/curser.png")
+    cursor_image = pygame.image.load("ACTUAL/Resources/Images/curser.png")
     cursor_image = pygame.transform.scale(cursor_image, (20, 20))
     curser = Object(20, 20, pygame.mouse.get_pos()[0], pygame.mouse.get_pos()[1])
 

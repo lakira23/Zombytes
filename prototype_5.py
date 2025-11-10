@@ -72,23 +72,23 @@ level_timer = pygame.time.get_ticks()
 
 
 # RESOURCES
-menu_backdrop = pygame.image.load("ACTUAL/Resources/Images/Menu/menu_img.png")
+menu_backdrop = pygame.image.load("ACTUAL\Resources\Images\Menu\menu_img.png")
 
-city_backdrop = pygame.image.load("ACTUAL/Resources/Images/city_backdrop.PNG")
+city_backdrop = pygame.image.load("ACTUAL\Resources\Images\city_backdrop.PNG")
 
-military_backdrop = pygame.image.load("ACTUAL/Resources/Images/military_back_drop.PNG")
+military_backdrop = pygame.image.load("ACTUAL\Resources\Images\military_back_drop.PNG")
 
-country_side_backdrop = pygame.image.load("ACTUAL/Resources/Images/country_side_backdrop.png")
+country_side_backdrop = pygame.image.load("ACTUAL\Resources\Images\country_side_backdrop.png")
 
-Leaderboard_backdrop = pygame.image.load("ACTUAL/Resources/Images/Menu/Leaderboard/Leaderboard_backdrop.png")
+Leaderboard_backdrop = pygame.image.load("ACTUAL\Resources\Images\Menu\Leaderboard\Leaderboard_backdrop.png")
 
-Jesey_ten = pygame.font.Font("ACTUAL/Resources/Images/Jersey10-Regular.ttf", 30)
+Jesey_ten = pygame.font.Font("ACTUAL\Resources\Images\Jersey10-Regular.ttf", 30)
 
-game_backdrop = pygame.image.load("ACTUAL/Resources/Images/Game_back_drop.png")
+game_backdrop = pygame.image.load("ACTUAL\Resources\Images\Game_back_drop.png")
 
-death_backdrop = pygame.image.load("ACTUAL/Resources/Images/Death_screen_img.png")
+death_backdrop = pygame.image.load("ACTUAL\Resources\Images\Death_screen_img.png")
 
-female_user_img = pygame.image.load("ACTUAL/Resources/Images/_female_character_animation.png")
+female_user_img = pygame.image.load("ACTUAL\Resources\Images\_female_character_animation.png")
 
 backdrop_options = [city_backdrop, military_backdrop, country_side_backdrop]
 current_game_backdrop = random.choice(backdrop_options)
