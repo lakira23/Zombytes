@@ -33,5 +33,6 @@ while running:
 
     pygame.draw.rect(window, (200, 100, 100), player)
     pygame.display.update()
+    #prototype 2
 
 pygame.quit()
