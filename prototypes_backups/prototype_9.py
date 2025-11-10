@@ -74,23 +74,23 @@ level_timer = pygame.time.get_ticks()
 
 
 # RESOURCES
-menu_backdrop = pygame.image.load("ACTUAL/Resources/Images/Menu/menu_img.png")
+menu_backdrop = pygame.image.load("Resources/Images/Menu/menu_img.png")
 
-city_backdrop = pygame.image.load("ACTUAL/Resources/Images/city_backdrop.PNG")
+city_backdrop = pygame.image.load("Resources/Images/city_backdrop.PNG")
 
-military_backdrop = pygame.image.load("ACTUAL/Resources/Images/military_back_drop.PNG")
+military_backdrop = pygame.image.load("Resources/Images/military_back_drop.PNG")
 
-country_side_backdrop = pygame.image.load("ACTUAL/Resources/Images/country_side_backdrop.png")
+country_side_backdrop = pygame.image.load("Resources/Images/country_side_backdrop.png")
 
-Leaderboard_backdrop = pygame.image.load("ACTUAL/Resources/Images/Menu/Leaderboard/Leaderboard_backdrop.png")
+Leaderboard_backdrop = pygame.image.load("Resources/Images/Menu/Leaderboard/Leaderboard_backdrop.png")
 
-Jesey_ten = pygame.font.Font("ACTUAL/Resources/Images/Jersey10-Regular.ttf", 30)
+Jesey_ten = pygame.font.Font("Resources/Images/Jersey10-Regular.ttf", 30)
 
-game_backdrop = pygame.image.load("ACTUAL/Resources/Images/Game_back_drop.png")
+game_backdrop = pygame.image.load("Resources/Images/Game_back_drop.png")
 
-death_backdrop = pygame.image.load("ACTUAL/Resources/Images/Death_screen_img.png")
+death_backdrop = pygame.image.load("Resources/Images/Death_screen_img.png")
 
-female_user_img = pygame.image.load("ACTUAL/Resources/Images/_female_character_animation.png")
+female_user_img = pygame.image.load("Resources/Images/character_1.png")
 
 backdrop_options = [city_backdrop, military_backdrop, country_side_backdrop]
 current_game_backdrop = random.choice(backdrop_options)
@@ -592,14 +592,14 @@ def death():
             ["accuracy", int(leader_board_scores[2][1])]
         ]
 
-        with open("comp 3/ACTUAL/leaderboard", "a") as file:
+        with open("leaderboard", "a") as file:
             file.write(str(score_entry) + "\n")
         
         death_logged = True
     
     window.blit(death_backdrop, (0, 0))
 
-    go_back = Buttons("go menu",186,40,42,724,pygame.image.load("comp 3/ACTUAL/Resources/Images/Menu/Game_start_button_img.png"))
+    go_back = Buttons("go menu",186,40,42,724,pygame.image.load("Resources/Images/Menu/Game_start_button_img.png"))
     go_back.set_mouse_pos()
 
     # Display text stats
@@ -660,21 +660,21 @@ def reset_game():
 ###################### Menu Buttons Setup
 
 menu_buttons = [
-    Buttons('go_game', 186, 40, 307, 234, pygame.image.load("comp 3/ACTUAL/Resources/Images/Menu/Game_start_button_img.png")),
-    Buttons('Name', 152, 44, 324, 512, pygame.image.load("comp 3/ACTUAL/Resources/Images/Menu/name_button_img.png")),
-    Buttons('go_Leaderboard', 174, 44, 313, 564, pygame.image.load("comp 3/ACTUAL/Resources/Images/Menu/leaderboard_button_img.png")),
-    Buttons('go_Characters_and_weapons', 298, 45, 251, 616, pygame.image.load("comp 3/ACTUAL/Resources/Images/Menu/character_and_weapons_buttons_img.png")),
-    Buttons('go_Settings', 120, 44, 340, 670, pygame.image.load("comp 3/ACTUAL/Resources/Images/Menu/settings_button_img.png")),
-    Buttons('Exit', 35, 31, 9, 14, pygame.image.load("comp 3/ACTUAL/Resources/Images/Menu/Exit_button_png.png"))
+    Buttons('go_game', 186, 40, 307, 234, pygame.image.load("Resources/Images/Menu/Game_start_button_img.png")),
+    Buttons('Name', 152, 44, 324, 512, pygame.image.load("Resources/Images/Menu/name_button_img.png")),
+    Buttons('go_Leaderboard', 174, 44, 313, 564, pygame.image.load("Resources/Images/Menu/leaderboard_button_img.png")),
+    Buttons('go_Characters_and_weapons', 298, 45, 251, 616, pygame.image.load("Resources/Images/Menu/character_and_weapons_buttons_img.png")),
+    Buttons('go_Settings', 120, 44, 340, 670, pygame.image.load("Resources/Images/Menu/settings_button_img.png")),
+    Buttons('Exit', 35, 31, 9, 14, pygame.image.load("Resources/Images/Menu/Exit_button_png.png"))
 ]
 
 ######Leaderboard buttons
 
 leaderboard_buttons = [
-    Buttons('survival_order', 148, 27, 161, 189, pygame.image.load("comp 3/ACTUAL/Resources/Images/Menu/Leaderboard/Survival_time_order_button_img.png")),
-    Buttons('Score_order', 149, 27, 326, 189, pygame.image.load("comp 3/ACTUAL/Resources/Images/Menu/Leaderboard/Total_score_order_button_img.png")),
-    Buttons('Accuracy_order', 148, 27, 492, 189, pygame.image.load("comp 3/ACTUAL/Resources/Images/Menu/Leaderboard/Accuracy_order_button_img.png")),
-    Buttons('go_menu', 102, 47, 662, 741, pygame.image.load("comp 3/ACTUAL/Resources/Images/Menu/Leaderboard/Back_button_img.png"))
+    Buttons('survival_order', 148, 27, 161, 189, pygame.image.load("Resources/Images/Menu/Leaderboard/Survival_time_order_button_img.png")),
+    Buttons('Score_order', 149, 27, 326, 189, pygame.image.load("Resources/Images/Menu/Leaderboard/Total_score_order_button_img.png")),
+    Buttons('Accuracy_order', 148, 27, 492, 189, pygame.image.load("Resources/Images/Menu/Leaderboard/Accuracy_order_button_img.png")),
+    Buttons('go_menu', 102, 47, 662, 741, pygame.image.load("Resources/Images/Menu/Leaderboard/Back_button_img.png"))
     ]
 #####game
 
@@ -710,7 +710,7 @@ while Game_runner:
     CLOCK.tick(FPS)
     clicking = False
 
-    cursor_image = pygame.image.load("comp 3/ACTUAL/Resources/Images/curser.png")
+    cursor_image = pygame.image.load("Resources/Images/curser.png")
     cursor_image = pygame.transform.scale(cursor_image, (20, 20))
     curser = Object(20, 20, pygame.mouse.get_pos()[0], pygame.mouse.get_pos()[1])
 
