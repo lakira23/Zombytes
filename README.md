@@ -1,5 +1,4 @@
-------------
-| Zombytes |
+ Zombytes 
 ------------
 
 A game configured using Python and PyGame.
