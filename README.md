@@ -9,7 +9,7 @@ Features - Core Gameplay
 
 - Wave-based survival with increasing difficulty
 - Dynamic scoring system & leaderboard
-- Multiple enemy types, unique behaviors, and pathfinding AI
+- Multiple enemy types, unique behaviours, and pathfinding AI
 - Challenging boss fights with unique abilities
 - Pickups including ammo, power-ups, and health boosts
 
@@ -27,5 +27,4 @@ Environmental & Immersive Elements
 - Background soundtrack and intensity-based dynamic music
 - Realistic breathing and player movement sounds
 - Multiple maps with secret areas, traps, and collectables
-
-Custom cursor and accessible, colourblind-friendly design
+- Custom cursor and accessible, colourblind-friendly design
