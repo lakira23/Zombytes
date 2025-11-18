@@ -28,3 +28,8 @@ Environmental & Immersive Elements
 - Realistic breathing and player movement sounds
 - Multiple maps with secret areas, traps, and collectables
 - Custom cursor and accessible, colourblind-friendly design
+
+Notice
+------
+- Whilst all the programming, the backdrops and most of the designs were designed by myself through Piskel.
+- Designs such as the character graphics and the weapon graphics were NOT designed by me, but were accessed from sites such as Pinterest. Some of these are owned by other companies such as NINTENDO.
